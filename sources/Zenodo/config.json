@@ -1,0 +1,37 @@
+{
+    "name": "zenodo",
+    "title": "Zenodo",
+    "icon": "${url:images/icon.svg}",
+    "description": "Zenodo Source",
+    "group": "Custom Sources",
+    "fields": {
+        "name": {
+            "label": "Name",
+            "description": "A name to identify this source."
+        },
+        
+        "community": {
+        "label": "Community name",
+        "description": "Filter results by community name"
+        },
+        "resource_type": {
+            "label": "Resource type",
+            "type": "select",
+            "default": "",
+            "description": "The resource type.",
+            "options": {
+                "All": "",
+                "Publication": "publication",
+                "Poster": "poster",
+                "Presentation": "presentation",
+                "Dataset": "dataset",
+                "Image": "image",
+                "Video": "video",
+                "Software": "software",
+                "Lesson": "lesson",
+                "Other": "other"
+            }
+        }
+    }
+    
+}
