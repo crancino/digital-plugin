@@ -1,0 +1,13 @@
+---
+iit-t1-pos:
+  label: iit-t1-pos
+  styles:
+    - custom
+  unicode: e001
+  voted: false
+iit-t2-pos:
+  label: iit-t2-pos
+  styles:
+    - custom
+  unicode: e002
+  voted: false

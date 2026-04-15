@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "plg_system_digital",
+  "version": "1.0.0",
+  "description": "Assets for Digital plugin",
+  "assets": [
+    {
+      "name": "plg_system_digital.fontawesome",
+      "type": "style",
+      "uri": "plg_system_digital/css/all.min.css"
+    }
+  ]
+}
+

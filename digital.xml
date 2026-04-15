@@ -1,0 +1,45 @@
+<extension type="plugin" group="system" method="upgrade">
+    <name>Digital Plugin</name>
+    <namespace path="src">IIT\Plugin\System\Digital</namespace>
+    <version>1.0</version>
+    <description>Extends Yootheme Pro functionalities</description>
+    <creationDate>Apr 2026</creationDate>
+    <copyright>Copyright (C)</copyright>
+    <license>GNU General Public License</license>
+    <author>Alex Cracas</author>
+    <authorEmail>alex.cracas@iit.it</authorEmail>
+    <authorUrl></authorUrl>
+    <files>
+        <folder>src</folder>
+        <filename plugin="digital">digital.php</filename>
+        <filename plugin="digital">digital.xml</filename>
+    </files>
+
+    <media destination="plg_system_digital" folder="media">
+        <folder>css</folder>
+        <folder>fonts</folder>
+		<folder>js</folder>
+		<folder>metadata</folder>
+		<folder>scss</folder>
+		<folder>sprites</folder>
+		<folder>sprites-full</folder>
+		<folder>svgs</folder>
+		<folder>svgs-full</folder>
+        <folder>webfonts</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="custom_js" 
+                       type="textarea" 
+                       label="Custom JavaScript" 
+                       description="Enter JS code without script tags"
+                       rows="10" 
+                       cols="50" 
+                       filter="raw" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

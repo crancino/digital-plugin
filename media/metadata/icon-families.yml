@@ -1,0 +1,17 @@
+---
+iit-t1-pos:
+  familyStylesByLicense:
+    other:
+      - family: kit
+        style: custom
+  label: iit-t1-pos
+  unicode: e001
+  voted: false
+iit-t2-pos:
+  familyStylesByLicense:
+    other:
+      - family: kit
+        style: custom
+  label: iit-t2-pos
+  unicode: e002
+  voted: false
