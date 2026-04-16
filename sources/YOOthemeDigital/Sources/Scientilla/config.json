@@ -1,0 +1,18 @@
+{
+    "name": "scientilla",
+    "title": "Scientilla",
+    "description": "User profiles from Scientilla research management system",
+    "group": "Custom sources",
+    "icon": "${url:~yooessentials_url/modules/source-providers/Database/icon.svg}",
+    "fields": {
+        "name": "${yooessentials.source.fields.name}",
+        "description": "${yooessentials.source.fields.description}",
+        "status": "${yooessentials.source.fields.status}",
+        "email": {
+            "label": "Email",
+            "description": "Default email/username for this source instance (used when the element/query doesn't pass an email)."
+        },
+        "cache_default": "${yooessentials.source.fields.cache_default}"
+    }
+}
+

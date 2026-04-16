@@ -1,0 +1,22 @@
+{
+    "name": "zenodo",
+    "title": "Zenodo",
+    "description": "Source based on Zenodo records",
+    "group": "Custom sources",
+    "icon": "${url:~yooessentials_url/modules/source-providers/Database/icon.svg}",
+    "fields": {
+        "name": "${yooessentials.source.fields.name}",
+        "description": "${yooessentials.source.fields.description}",
+        "status": "${yooessentials.source.fields.status}",
+        "community": {
+            "label": "Community",
+            "description": "Zenodo community identifier to query."
+        },
+        "resource_type": {
+            "label": "Resource type",
+            "description": "Optional resource type filter (depends on your API implementation)."
+        },
+        "cache_default": "${yooessentials.source.fields.cache_default}"
+    }
+}
+

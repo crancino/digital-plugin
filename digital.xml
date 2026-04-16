@@ -1,8 +1,8 @@
 <extension type="plugin" group="system" method="upgrade">
     <name>Digital Plugin</name>
     <namespace path="src">IIT\Plugin\System\Digital</namespace>
-    <version>1.0</version>
-    <description>Extends Yootheme Pro functionalities</description>
+    <version>1.1</version>
+    <description>Extends Yootheme Pro functionalities and more</description>
     <creationDate>Apr 2026</creationDate>
     <copyright>Copyright (C)</copyright>
     <license>GNU General Public License</license>
@@ -10,6 +10,7 @@
     <authorEmail>alex.cracas@iit.it</authorEmail>
     <authorUrl></authorUrl>
     <files>
+        <folder>sources</folder>
         <folder>src</folder>
         <filename plugin="digital">digital.php</filename>
         <filename plugin="digital">digital.xml</filename>
@@ -31,14 +32,68 @@
 
     <config>
         <fields name="params">
-            <fieldset name="basic">
-                <field name="custom_js" 
-                       type="textarea" 
-                       label="Custom JavaScript" 
-                       description="Enter JS code without script tags"
-                       rows="10" 
-                       cols="50" 
-                       filter="raw" />
+            <fieldset name="custom_javascript" label="Custom JavaScript">
+                <field
+                    name="custom_js"
+                    type="editor"
+                    label="Custom JavaScript"
+                    description="Enter JS code (with or without script tags)"
+                    default=""
+                    rows="20"
+                    cols="80"
+                    filter="raw"
+                    editor="codemirror"
+                    buttons="no"
+                    syntax="javascript"
+                />
+            </fieldset>
+
+            <fieldset name="zenodo" label="Zenodo">
+                <field
+                    name="zenodo_url"
+                    type="url"
+                    label="Zenodo Base URL"
+                    description="Base URL for Zenodo (e.g. https://zenodo.org or https://sandbox.zenodo.org). Leave empty to use the default."
+                    filter="raw"
+                />
+				<field
+                    name="zenodo_token"
+                    type="text"
+                    label="Zenodo Access Token"
+                    description="Personal access token used to query the Zenodo API."
+                    filter="raw"
+                />
+            </fieldset>
+
+            <fieldset name="scientilla" label="Scientilla">
+                <field
+                    name="scientilla_url"
+                    type="url"
+                    label="Scientilla Base URL"
+                    description="Base URL for Scientilla (e.g. https://scientilla.iit.it). Leave empty to use the default."
+                    filter="raw"
+                />
+
+                <field
+                    name="scientilla_token"
+                    type="text"
+                    label="Scientilla Access Token"
+                    description="Bearer token used to query the Scientilla API."
+                    filter="raw"
+                />
+            </fieldset>
+
+            <fieldset name="debug" label="Debug">
+                <field
+                    name="debug_sources"
+                    type="radio"
+                    default="0"
+                    label="Debug custom sources"
+                    description="If enabled, writes Digital plugin source registration info to administrator/logs/digital.log.php."
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
             </fieldset>
         </fields>
     </config>
